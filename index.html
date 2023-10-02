@@ -7,6 +7,7 @@
 </head>
 <body>
     <div id="registroProductos">
+<h2>Registro de los Productos:</h2>
         <form>
         <label for="identificacion">Identificacion:</label>
         <input type="text" id="identificacion" name="identificacion">
@@ -15,21 +16,28 @@
         <input type="text" id="nombre" name="nombre">
         <br>
         <label for="descripcion">Descripcion:</label>
-        <input type="text" id="descripcion" name="descripcion">
+        <textarea id="descripcion" name="descripcion"></textarea>
         <br>
         <label for="cantidad">Cantidad en stock:</label>
-        <input type="text" id="cantidad" name="cantidad">
+        <input type="number" id="cantidad" name="cantidad">
         <br>
         <label for="costo">Costo asociado al producto:</label>
-        <input type="text" id="costo" name="costo">
+        <input type="number" id="costo" name="costo">
         <br>
+        <button type="submit">Enviar</button>
     </form>
       </div>
       
       <div id="registroMovimientos">
+        <h2>Registro de los Movimientos:</h2>
         <form>
         <label for="tipoTransaccion">Tipo de transaccion:</label>
-        <input type="text" id="tipoTransaccion" name="tipoTransaccion">
+        <select id="tipoTransaccion" name="tipoTransaccion">
+        <option value=""></option>
+        <option value="compra">Compra</option>
+        <option value="venta">Venta</option>
+        </select>
+
         <br>
         <label for="fecha">Fecha de la transaccion:</label>
         <input type="date" id="fecha" name="fecha">
@@ -38,19 +46,25 @@
         <input type="text" id="producto" name="producto">
         <br>
         <label for="cantidadProducto">Cantidad del producto:</label>
-        <input type="text" id="cantidadProducto" name="cantidadProducto">
+        <input type="number" id="cantidadProducto" name="cantidadProducto">
         <br>
-        <label for="costoUnitario">Costo unitario del producto:</label>
-        <input type="text" id="costoUnitario" name="costoUnitario">
+        <label for="costoUnitario">Costo unitario del producto: $</label>
+        <input type="number" id="costoUnitario" name="costoUnitario">
         <br>
         <label for="subtotal">Subtotal:</label>
-        <input type="text" id="subtotal" name="subtotal">
+        <input type="number" id="subtotal" name="subtotal">
         <br>
         <label for="iva">IVA:</label>
-        <input type="text" id="iva" name="iva">
+        <select type="number" id="iva" name="iva">
+        <option value=""></option>
+        <option value="basico">Basico</option>
+        <option value="minimo">Minimo</option>
+        </select>
         <br>
         <label for="total">Total:</label>
-        <input type="text" id="total" name="total">
+        <input type="number" id="total" name="total">
+        <br>
+        <button type="submit">Enviar</button>
     </form>
       </div>  
 </body>
